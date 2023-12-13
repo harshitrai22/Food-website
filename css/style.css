@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    /* 10px=62.5% */
+    font-size: 62.5%;
+    
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ###################### UTILITY CLASSES ######################### */
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 1em 2.5rem;
+    margin: 1.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.btn-primary{
+    color: #fff;
+    background: #11a786;
+}
+
+.btn-primary:hover{
+    color: #128068;
+    transition: background 0.3s ease-in-out;
+}
+
+
+/* ###################### navbar styling ######################### */
+
+/* for desktop mode */
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px  #aaa;
+     position: fixed; /*use to fix top of the screen */
+     width: 100%;
+     background: #fff;
+     color: #000;
+     opacity: 0.85rem;
+     z-index: 999;
+     padding: 20px;
+     
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.menu-items{
+    order: 2;
+    /* To put items to the right side*/
+    display: flex;
+    /*to change items column to row */
+}
+
+.menu-items li{
+    list-style: none;  
+    margin-left: 1.5rem;  
+    font-size: 1.8rem;
+}
+
+.logo{
+    order: 1;
+    /* To put items to the left side */
+    font-size: 3rem;
+}
+
+.navbar a{
+    text-transform: uppercase;
+    color: #444;
+    text-decoration: none;  /* to remove border bottom */
+    transition: color 0.3s ease-in-out;
+     /* to change the color from green after hover */
+}
+
+.navbar a:hover{
+    color: rgba(18, 108, 18, 0.58);
+    text-decoration: none;
+}
+.navbar .click1:visited{
+    color: rgba(174, 22, 22, 0.208);
+}
+.navbar .click2:visited{
+    color: rgba(174, 22, 22, 0.208);
+}
+.navbar .click3:visited{
+    color: rgba(174, 22, 22, 0.208);
+}
+.navbar .click4:visited{
+    color: rgba(174, 22, 22, 0.208);
+}
+.navbar .click5:visited{
+    color: rgba(174, 22, 22, 0.208);
+}
+
+
+/* ######################## SHOWCASE STYLING ################### */
+
+.showcase-area{
+    height: 50vh;
+    background: linear-gradient(rgba(240,240,240,0.144),rgba(255,255,255,0.336)),url("./image/header-image2.jpg");
+    background: url("../Image/header-image2.jpg");
+    /* background: url("./image/bgimg.jpg"); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Menu Showcase Styling */
+.showcase-area-menu{
+    height: 50vh;
+    background: linear-gradient(rgba(240,240,240,0.144),rgba(255,255,255,0.336)),url("./image/contact.jpg");
+    background: url("../Image/menu-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/** Contact Showcase Styling **/
+.showcase-area-contact{
+    height: 90vh;
+    background: linear-gradient(rgba(240,240,240,0.144),rgba(61, 50, 50, 0.336)),url("./image/menu-banner.jpg");
+    background: url("../image/contact-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/**  testemonial Styling **/
+.showcase-area-testimonial{
+    height: 50vh;
+    background: linear-gradient(rgba(240,240,240,0.144),rgba(61, 50, 50, 0.336)),url("./image/testimonials.jpg");
+    background: url("../image/testimonials.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/** showcase category Styling **/
+.showcase-area-category{
+    height: 50vh;
+    background: linear-gradient(rgba(240,240,240,0.144),rgba(61, 50, 50, 0.336)),url("./image/contact.jpg");
+    background: url("../image/contact.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.showcase-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 2rem;
+    margin: 50px;
+}
+
+.main-title{
+    text-transform: uppercase;
+}
+
+
+/* ############################ ABOUT US STYLING #################################### */
+
+#about{    
+    padding: 50px 0px;
+    background: #f5f5f7;
+}
+
+.about-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#about h2{
+    font-size: 3.2rem;
+}
+
+#about p{
+    font-size: 1.6rem;
+    color: #555;
+}
+
+#about .small{
+    font-size: 1.6rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.about-img{
+    flex: 1 1 400px;
+    padding: 30px;
+    /* border: 2px solid red; */
+    transform: translateX(150%);
+    animation: about-img-animation 2s ease-in-out forwards;
+}
+@keyframes about-img-animation{
+    100%{
+        transform: translate(0)
+    }
+}
+.about-text{
+    flex: 1 1 400px;
+    padding: 30px;
+    margin: auto;
+    transform: translateX(-150%);
+    animation: about-text-animation 2s ease-in-out forwards;
+}
+@keyframes about-text-animation{
+    100%{
+        transform: translate(0)
+    }
+}
+
+.about-img img{
+    display: block;
+    border: 2px solid rgba(163, 160, 160, 0.203);
+    height: 330px;
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: right; 
+    border-radius: 10%;
+    /* image will be fixed from right side  and if screen is minimize then it will be shrink from left side*/
+}
+
+/* ############################### FOOD CATEGORY STYLING ################################# */
+
+#food{
+    padding: 5rem 0 10rem 0;
+}
+
+#food h2{
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: #555;
+}
+
+.food-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-container img{
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center; /*image will be srink from center*/
+}
+.img-container{
+    margin: 0 1rem;
+    position: relative;
+}
+
+.img-content{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 2;
+    text-align: center;
+    transition: all 0.3s ease 0.1s;
+}
+
+.img-content h3{
+    color: #fff;
+    font-size: 3rem;
+    
+}
+
+.img-content a{
+    font-size: 1.2rem;
+}
+
+.img-container::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.871);
+    /* opacity: 0; */
+    z-index: 1;
+
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-container:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+    
+}
+
+.img-container:hover .img-content{
+    opacity: 1;
+    top: 40%;
+}
+
+/* ######################### FOOD MENU STYLING ################################# */
+
+.food-menu-heading{
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 400;
+    color: #666;
+}
+
+.food-menu-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px 30px 0px;
+}
+
+.food-menu-container img{
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.food-menu-item{
+    display: flex;
+    flex: 1 1 600px;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+
+.food-description{
+    margin: auto 1.5rem;
+}
+
+.food-title{
+    font-size: 3.2rem;
+    font-weight: 400;
+    color: #444;
+}
+
+.food-description p{
+    font-size: 1.4rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.food-description .food-price{
+    color: #117964;
+    font-weight: 700;
+}
+
+.food-description a{
+    color: red;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+.food-description a:hover{
+    
+    color: #fff;
+    background-color: rgb(138, 144, 151);
+}
+
+
+/* ##################### TESTIMONIAL STYLING   ################################### */
+
+#testimonial{
+    padding: 5rem 0rem;
+    /* background-color: rgb(241, 229, 229); */
+    background-color: #ffff;
+}
+
+.testimonial-title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: normal;
+    /* normal means  400 */
+    color: #555;
+}
+
+.testimonial-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+.testimonial-box .checked{
+    color: #ff9529;
+}
+
+.testimonial-box .testimonial-text{
+    margin: 1rem 0;
+    color: #444;
+}
+
+.testimonial-box{
+    text-align: center;
+    padding: 1rem;
+}
+
+.customer-photo img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin: auto;
+}
+
+/** ABOUT DEVELOPER **/
+.row{
+    margin-top: 50px;
+}
+
+.owner-title{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: normal;
+    /* normal means  400 */
+    color: rgb(235, 36, 36);
+}
+
+.owner-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+.owner-box .checked{
+    color: #ff9529;
+}
+
+.owner-box .owner-name{
+    /* border: 1px solid red; */
+    margin: 1rem 0rem;
+    color: #444;
+    font-weight: 450;
+
+}
+
+.owner-box{
+    text-align: center;
+    padding: 1rem;
+}
+
+.owner-photo img{
+    display: block;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-top: auto;
+    padding: 1rem 1rem ;
+}
+
+/* ################### CONTACT US STYLING ####################### */
+
+#contact{
+    padding: 5rem 0;
+    background: rgb(226, 226, 226);
+}
+
+.contact-container{
+    display: flex;
+    background: #fff;
+}
+
+.contact-img{
+    width: 50%;
+}
+
+.contact-img img{
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.form-container{
+    padding: 1rem;
+    width: 50%;
+    margin: auto;
+}
+
+.form-container input{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 500;
+}
+
+.form-container textarea{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+}
+
+.food-container h2{
+    font-size: 3rem;
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.form-container a{
+    font-size: 1.2rem;
+}
+
+
+
+/* ################################### MAIN FOOTER STYLING #########################################*/
+
+.main-footer{
+    background-color: #272828f0;
+    margin-top: -100px;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+
+.h2-contact{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    line-height: 50px;
+    letter-spacing: 3px;
+    color: #fff;
+    margin-top: 26px;
+}
+.h2-contact-span{
+    color: #fff;
+}
+
+.p-contact{
+    color: #fff;
+    font-size: 16px;
+    line-height: 38px;
+    letter-spacing: 1px;
+    text-align: start;
+}
+
+.strong-footer{
+    color: #fff;
+}
+
+.fa-2x{
+    color: rgba(201, 88, 88, 0.573);
+}
+
+.f{
+    background-color: #000;
+    padding-top: 30px; 
+    padding-bottom: 10px;
+    font-size:13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.last{
+    text-decoration: none;
+    color: #fff;
+}
+.last:hover{
+    color: #fff;
+}
+
+/* ################### FOOTER STYLING ################ */
+
+#footer h2{
+    text-align: center;
+    font-size: 2rem;
+    padding: 3rem;
+    font-weight: 500;
+    color: #fff;
+    background: rgb(65, 65, 65);
+}
